@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0.4781951, g: 0.48860806, b: 0.509434, a: 1}
+  m_AmbientEquatorColor: {r: 0.44708973, g: 0.46751514, b: 0.4811321, a: 1}
+  m_AmbientGroundColor: {r: 0.4245283, g: 0.40917587, b: 0.378471, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -273,7 +273,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -389,6 +389,10 @@ MonoBehaviour:
     Image: {fileID: 2800000, guid: 3039c29b40f0ace4a861f62e63161e31, type: 3}
     Prefab: {fileID: 5622657975415600276, guid: 7ddad9680ae08974fb8d80ccc79c0756,
       type: 3}
+  - Name: peak
+    Image: {fileID: 2800000, guid: d9d0423dbcbaecd44a1c5cbeecd7bde0, type: 3}
+    Prefab: {fileID: 6646022408763095935, guid: 9953b15364a3f8e4b9d904ad5b3b5f6a,
+      type: 3}
   DebugText: {fileID: 0}
 --- !u!1 &1548761329
 GameObject:
@@ -449,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ReferenceLibrary: {fileID: 11400000, guid: 5e22f0e7eec9d634c9dd80b75ea28080, type: 2}
-  m_MaxNumberOfMovingImages: 2
+  m_MaxNumberOfMovingImages: 3
   m_TrackedImagePrefab: {fileID: 0}
 --- !u!1 &1695969493
 GameObject:

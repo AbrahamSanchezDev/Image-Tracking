@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
@@ -39,12 +40,22 @@ namespace Worlds
 
         private void SpawnObjs()
         {
+            var targetObj = Camera.main;
             for (var i = 0; i < RunTimeObjects.Count; i++)
             {
-                RunTimeObjects[i].RunTimeObj = Instantiate(RunTimeObjects[i].Prefab);
-                RunTimeObjects[i].RunTimeObj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-                RunTimeObjects[i].RunTimeObj.SetActive(false);
+                var obj = Instantiate(RunTimeObjects[i].Prefab);
+                RunTimeObjects[i].RunTimeObj = obj;
+                obj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                obj.SetActive(false);
                 //StartCoroutine("AddImageCo", RunTimeObjects[i]);
+                var textObj = obj.transform.GetComponentInChildren<TextMeshPro>();
+                if (textObj != null)
+                {
+                    var look = textObj.gameObject.AddComponent<WorldSpaceUI>();
+                    look.LookOnMyY = false;
+                    look.SetUpCameraTransform(targetObj.transform);
+                    look.SetLookAtCam(true);
+                }
             }
         }
 
@@ -94,7 +105,6 @@ namespace Worlds
                 go.transform.rotation = data.transform.rotation;
                 //_trackedImageManager.enabled = false;
                 //_trackedImageManager.trackedImagePrefab = go;
-
                 //_trackedImageManager.enabled = true;
                 ShowText("tracking " + theName);
             }

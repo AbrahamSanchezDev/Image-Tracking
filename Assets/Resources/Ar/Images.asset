@@ -35,3 +35,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: cube
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5635002313666935590
+      m_GuidHigh: 15640200860208867001
+    m_SerializedTextureGuid:
+      m_GuidLow: 17065472398717895229
+      m_GuidHigh: 16194337246900132938
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: peak
+    m_Texture: {fileID: 0}
