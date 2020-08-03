@@ -102,7 +102,7 @@ namespace Worlds
             if (go != null)
             {
                 go.transform.position = position;
-                go.transform.rotation = data.transform.rotation;
+                //go.transform.rotation = data.transform.rotation;
                 //_trackedImageManager.enabled = false;
                 //_trackedImageManager.trackedImagePrefab = go;
                 //_trackedImageManager.enabled = true;
